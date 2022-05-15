@@ -101,3 +101,93 @@ function getCoupeNumber(x) {
    }
 }
 getCoupeNumber();
+
+
+// Упражнение 8.
+// Место для первой задачи
+function getTimeFromMinutes(x) {
+
+    if ( typeof(x) !== 'number' || !Number.isInteger(x) || x<0 ) {
+        console.log ("Ошибка, проверьте данные");
+
+    } else {
+        let hour = Math.floor(x/60);
+            minutes = x % 60 ;
+
+    let str = '';
+
+    switch (hour) {
+        
+        case 1:
+        str = 'час';
+        break;
+
+        case 2:
+        case 3:
+        case 4:
+        str = 'часа';
+        break;
+
+        default:
+        str = 'часов';
+    }
+        
+    return `Это ${hour} ${str} и ${minutes} минут`;
+
+    }
+
+}
+getTimeFromMinutes();
+
+
+function getTimeFromMinutes(x) {
+
+    if ( typeof(x) !== 'number' || !Number.isInteger(x) || x<0 ) {
+        console.log ("Ошибка, проверьте данные");
+
+    } else {
+        let hours = Math.floor(x/60);
+            minutes = x % 60 ;
+
+    let hoursStr = '';
+
+    switch (hours) {
+        
+        case 1:
+        hoursStr = 'час';
+        break;
+
+        case 2:
+        case 3:
+        case 4:
+        hoursStr = 'часа';
+        break;
+
+        default:
+        hoursStr = 'часов';
+    }
+
+    let minutesStr = '';
+
+    switch (minutes) {
+        
+        case 1:
+        minutesStr = 'минута';
+        break;
+
+        case 2:
+        case 3:
+        case 4:
+        minutesStr = 'минуты';
+        break;
+
+        default:
+        minutesStr = 'минут';
+    }
+        
+    console.log (`Это ${hours} ${hoursStr} и ${minutes} ${minutesStr}`);
+
+    }
+
+}
+getTimeFromMinutes(82);
