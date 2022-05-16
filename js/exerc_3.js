@@ -191,3 +191,93 @@ function getTimeFromMinutes(x) {
 
 }
 getTimeFromMinutes(82);
+
+// Место для второй задачи
+function findMaxNumber (num1, num2, num3, num4) {
+
+    if ( typeof(num1 && num2 && num3 && num4) !== 'number' ) {
+        console.log (0);
+
+    } else {
+
+    console.log (Math.max(num1, num2, num3, num4));
+
+    }
+}
+findMaxNumber (1, 5, 6.6, '1');
+
+
+// Упражнение 4.
+// Место для первой задачи
+function firstTask() {
+    // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
+    const arr = [3, 5, 8, 16, 20, 23, 50];
+    const result = [];
+
+    // Пишем решение вот тут
+     for (let i = 0; i < arr.length; i++) {
+        result[i] = arr[i];
+    }     
+    // Не трогаем
+    return result;
+}
+
+// Место для второй задачи
+function secondTask() {
+    // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
+    const data = [5, 10, 'Shopping', 20, 'Homework'];
+
+    // Пишем решение вот тут
+    for (let i = 0; i < data.length; i++) {
+        if ( typeof(data[i]) !== 'number' ) {
+            data[i] = `${data[i]} - done`;
+        } else {
+            data[i] = data[i]*2;
+        }
+    }
+            console.log(data);
+            
+    // Не трогаем
+    return data;
+}
+
+secondTask();
+
+
+// Место для третьей задачи
+function thirdTask() {
+    // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
+    const data = [5, 10, 'Shopping', 20, 'Homework'];
+    const result = [];
+
+    // Пишем решение вот тут
+    for (let i = 1; i <= data.length; i++) {
+        result[i - 1] = data[data.length - i];
+    }
+
+    console.log(result);
+    // Не трогаем
+    return result;
+}
+
+thirdTask();
+
+//Упражнение 5
+
+const lines = 5;
+let result = '';
+// Проверяется именно переменная result, формируйте строку в ней
+for (let i = 0; i <= lines; i ++) {
+
+    for (let k = 0; k < lines-i; k++) {
+        result += ' ';
+    }
+    
+    for (let j = 0; j < 2*i+1; j++) {
+        result += '*';
+
+    }
+        result += '\n';
+}
+
+console.log (result);
